@@ -1,22 +1,27 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { Fraunces } from "next/font/google";
 import "./globals.css";
 
-const mono = JetBrains_Mono({
+const serif = Fraunces({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-serif",
   display: "swap",
+  axes: ["SOFT", "opsz"],
 });
 
 export const metadata: Metadata = {
-  title: "Fabiola Sainvry — Développeuse",
+  title: "Fabiola Sainvry — Dev",
   description:
-    "Carte de visite numérique — développement d'applications multiplateformes & automatisation.",
+    "Développement logiciel et base de données. ",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="fr" className={mono.variable}>
+    <html lang="fr" className={serif.variable}>
       <body>{children}</body>
     </html>
   );

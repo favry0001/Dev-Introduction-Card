@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files 
 .env*
+.env*.local
 
 # vercel
 .vercel
@@ -60,3 +61,7 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+.env*.local
+node_modules
+prisma7.config.ts
